@@ -53,14 +53,9 @@ def host_range_ping_tab(lst):
                    tablefmt='pipe'))
 
 
-# tuples_list = [['Python', 'interpreted', '1991'],
-#                ['JAVA', 'compiled', '1995'],
-#                ['С', 'compiled', '1972']]
-# print(tabulate(tuples_list, headers=['1', '2', '3']))
-
 if __name__ == '__main__':
     ips = ['yandex.com', 'gb.ru', '127.0.0.1', 'cb', '24452462345', 'thisnotip']
     hosts = list(map(str, ipaddress.ip_network('80.0.1.0/28').hosts()))
-    # pprint(host_ping(ips))
-    # pprint(host_range_ping(hosts))
+    pprint(host_ping(ips))
+    pprint(host_range_ping(hosts))
     print(host_range_ping_tab(['yandex.com', 'gb.ru', '127.0.0.1', 'cb', '24452462345', 'thisnotip']))
